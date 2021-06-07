@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일 로그인</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        li {list-style: none;}
+        a {
+            text-decoration: none;
+            color:#000;
+            display: block;
+        }
+        form{
+            width: 375px; 
+            border: 1px solid #333;
+            margin: 0px auto;
+        }
+        form h2 {
+            font-size: 20px;
+            width: 375px;
+            height: 75px;
+            background-color: #F94374;
+            color: #fff;
+            text-align: center;
+            line-height: 75px;
+            margin-bottom: 25px;
+        }
+        fieldset {
+            border: 0;
+            padding: 10px;
+            font-size: 14px; 
+        }
+        fieldset .div label {
+            line-height: 38px;
+        }
+        /* fieldset .div > label {
+            line-height: 38px;
+        } */
+        .box01 {text-align: right;}
+        .box01 > div::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .box01 > div > label{
+            float: left;
+            line-height: 38px;
+        }
+       
+       .box01 input {
+            width: 250px;
+            height: 38px;
+            border: 1px solid #333;
+            /* margin: 10px 0; */
+            margin-bottom: 10px;
+        } 
+        .btn01 button{
+            width: 250px;
+            height: 38px;
+            background-color: #9E9E9E;
+            border: 0;
+            border-radius: 6px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 38px;
+            margin-bottom: 10px;
+        }
+        .btn02 button{
+            width: 250px;
+            height: 38px;
+            background-color: #9E9E9E;
+            border: 0;
+            border-radius: 6px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 38px;
+            margin-bottom: 10px;
+        }
+        .box02 div {
+            margin: 10px 0;
+        }
+        .box03 h3 {
+            font-size: 20px;
+            width: 375px;
+            height: 75px;
+            background-color: #F94374;
+            color: #fff;
+            text-align: center;
+            line-height: 75px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="form">
+        <form action="" method="POST">
+            <h2>회원가입</h2>
+            <fieldset>
+                <div class="box01">
+                    <div>
+                        <label for="name">아이디(이메일)</label>
+                        <input type="text" id="name" placeholder="이메일을 입력하세요." required>
+                    </div>
+                    <div class="btn01">
+                        <button>중복확인</button>
+                    </div>
+                    <div>
+                        <label for="pass">비밀번호</label>
+                        <input type="password" id="pass" placeholder="비밀번호" required>
+                    </div>
+                    <div>
+                        <label for="pass">비밀번호 확인</label>
+                        <input type="password" id="pass" placeholder="비밀번호 확인" required>
+                    </div>
+                    <div>
+                        <label for="name">이름</label>
+                        <input type="text" id="name" placeholder="성명을 입력하세요." required>
+                    </div>
+                    <div>
+                        <label for="number">휴대폰 번호</label>
+                        <input type="number" id="number" placeholder="'-' 구분없이 입력하세요.">
+                    </div>
+                    <div class="btn02">
+                        <button>인증번호 전송</button>
+                    </div>
+                    <div>
+                        <label for="certified">인증번호</label>
+                        <input type="text" id="certified" placeholder="인증번호 입력하세요." required>
+                    </div>
+                    <div>
+                        <label for="birthday">생년월일</label>
+                        <input type="text" id="birthday" placeholder="8자리입력 입력하세요." required>
+                    </div>
+                    <div>
+                        <label for="address">주소</label>
+                        <input type="text" id="address" placeholder="8자리입력 입력하세요." required>
+                    </div>
+                </div><!-- .box01 end -->
+                <div class="box02">
+                        <div class="radio01">
+                            <label for="gender">성별</label>
+                            <div>
+                                <input type="radio" id="ra01" name="gender" value="man">
+                                <label for="ra01">남성</label>
+                                <input type="radio" id="ra02" name="gender" value="woman">
+                                <label for="ra02">여성</label>
+                            </div>
+                        </div>
+                        <div class="radio02">
+                            <input type="radio" id="ra03" name="nationality" value="koreans">
+                            <label for="ra03">내국인</label>
+                            <input type="radio" id="ra04" name="nationality" value="foreigner">
+                            <label for="ra04">외국인</label>
+                        </div>
+                        <div class="radio03">
+                            <input type="radio" id="ra05" name="consent" value="consent">
+                            <label for="ra05">모두 동의 합니다.</label>
+                        </div>
+                        <div class="radio04">
+                            <input type="radio" id="ra06" name="consent" value="consent">
+                            <label for="ra06">이용약관 동의</label>
+                        </div>
+                        <div class="radio05">
+                            <input type="radio" id="ra07" name="consent" value="consent">
+                            <label for="ra07">개인정보 취급방침 동의</label>
+                        </div>
+                        <div class="radio06">
+                            <input type="radio" id="ra08" name="consent" value="consent">
+                            <label for="ra08">마케팅 정보수신 동의</label>
+                        </div>
+                </div><!-- .box02 end -->
+            </fieldset>
+            <div class="box03">
+                <h3>회원가입</h3>
+            </div><!-- .box03 end -->
+        </form>
+    </div>
+
+    
+</body>
+</html>
